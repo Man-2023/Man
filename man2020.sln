@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "man2020", ".", "{393A68F4-EB2D-4CC0-9FFA-B3E08389E1A5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/man2020"
+		Debug.AspNetCompiler.PhysicalPath = "F:\man2020\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\man2020\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/man2020"
+		Release.AspNetCompiler.PhysicalPath = "F:\man2020\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\man2020\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2144"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393A68F4-EB2D-4CC0-9FFA-B3E08389E1A5}.Debug|.NET.ActiveCfg = Debug|.NET
+		{393A68F4-EB2D-4CC0-9FFA-B3E08389E1A5}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

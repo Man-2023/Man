@@ -1,0 +1,37 @@
+﻿Imports System.Data.OleDb
+Partial Class Default2
+    Inherits System.Web.UI.Page
+
+    '    (" Select item, " & "count ([item]) as TItem " & "From Masrofat Where  cdate(date) >='" & myDate & "'" & "and cdate(date) <='" & myDate1 & "'" & s1 & " group by item;")
+
+    Protected Sub LinkButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles LinkButton1.Click
+
+    End Sub
+    Function GetManData(ByVal sortBy As String) As System.Data.OleDb.OleDbDataReader
+        Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\webTest\man.accdb"
+        Dim sqlConnection As New OleDbConnection(connectionString)
+        Dim sqlString As String = " SELECT * FROM masrofat ORDER By " & "sortBy desc"
+        Dim sqlCommand As New OleDbCommand(sqlString, sqlConnection)
+        sqlConnection.Open()
+        Dim dataReader As OleDbDataReader = sqlCommand.ExecuteReader(Data.CommandBehavior.CloseConnection)
+        Return dataReader
+    End Function
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Not Page.IsPostBack Then
+            dgData.DataSource = GetManData("date")
+            dgData.DataBind()
+        End If
+    End Sub
+    Protected Sub dgData_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs) Handles dgData.Sorting
+
+    End Sub
+    Sub sortDataGrid(ByVal sender As Object, ByVal e As DataGridSortCommandEventArgs)
+        dgData.DataSource = GetManData(e.SortExpression)
+        dgData.DataBind()
+
+    End Sub
+
+    Protected Sub dgData_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgData.SelectedIndexChanged
+    End Sub
+End Class
